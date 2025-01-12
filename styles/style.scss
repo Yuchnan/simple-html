@@ -1,0 +1,296 @@
+html {
+    height: 100%;
+    margin: 0;
+
+    body {
+        background-color: #181C14;
+        margin: 0;
+        color: #ECDFCC;
+        overflow-x: hidden;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+}
+
+
+header {
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 500;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer {
+    position: relative;
+    background-color: #697565;
+    height: 20px;
+    width: 100%;
+    padding: 5px;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    bottom: 0;
+    font-size: small;
+    font-weight: 200;
+    font-family: 'Lucida Sans', 'Lucida Saans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main-container {
+    width: 75%;
+    margin: 0 auto;
+    display: block;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    margin-left: 10px;
+
+    ul {
+        padding-left: 0;
+        display: flex;
+        padding-right: 10px;
+        list-style-type: none;
+        margin: 0;
+
+        li {
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: small;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-bottom: none;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            background-color: #181C14;
+
+            a {
+                font-size: 12px;
+                padding: 5px;
+
+                &:hover {
+                    color: cornflowerblue;
+                }
+            }
+
+            &:hover {
+                scale: 110%;
+            }
+        }
+    }
+}
+
+article {
+    width: 100%;
+    margin-right: 20px;
+}
+
+.main-content {
+    display: flex;
+    background-color: #181C14;
+    width: 100%;
+    margin-left: 0;
+}
+
+span {
+    font-weight: bold;
+}
+
+th {
+    img {
+        width: 15px;
+        height: 15px;
+        vertical-align: middle;
+    }
+}
+
+th img {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+}
+
+hr {
+    margin-top: 0;
+    opacity: 0.2;
+}
+
+.aside-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+
+    tr {
+        &:nth-child(even) {
+            background-color: #697565;
+        }
+    }
+
+    td {
+        text-align: center;
+        font-size: 12px;
+        text-decoration: none;
+        padding: 5px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    th {
+        text-align: center;
+        font-size: 12px;
+        text-decoration: none;
+        padding: 5px;
+        text-align: center;
+        vertical-align: middle;
+
+        &:nth-child(odd) {
+            text-align: left;
+            width: 50%;
+        }
+
+        &:nth-child(even) {
+            text-align: right;
+            width: 50%;
+        }
+    }
+}
+
+.aside-content {
+    background-color: #3C3D37;
+    text-align: center;
+    max-width: 400px;
+    max-height: fit-content;
+    text-align: center;
+    margin-right: 10px;
+
+    img {
+        max-width: 300px;
+        max-height: 300px;
+        padding: 8px;
+    }
+
+    p {
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    div {
+        text-align: center;
+    }
+}
+
+.aside-header {
+    margin: 0;
+    padding: 8px;
+    background-color: crimson;
+}
+
+.prize-table {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    thead {
+        background-color: #3C3D37;
+    }
+
+    th {
+        color: white;
+        padding: 8px 24px 8px 24px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    tr {
+        height: 25px;
+    }
+
+    tbody {
+        img {
+            margin-right: 4px;
+            scale: 1.2;
+        }
+
+        th:nth-child(4) {
+            text-align: left;
+        }
+    }
+}
+
+/* responsive */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* medium devices */
+@media screen and (max-width: 768px) {
+    .main-container {
+        width: 90%;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .main-content {
+        flex-direction: column-reverse;
+    }
+
+    .prize-table th,
+    .prize-table td {
+        font-size: 14px;
+    }
+
+    .aside-content {
+        max-width: 100%;
+    }
+}
+
+/* small devices */
+@media screen and (max-width: 480px) {
+    header {
+        font-size: small;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 0 10px;
+        flex-direction: column-reverse;
+    }
+
+    article {
+        margin-right: 0;
+    }
+
+    footer {
+        font-size: x-small;
+    }
+
+    .aside-content {
+        max-width: 100%;
+    }
+
+    .prize-table th,
+    .prize-table td {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
