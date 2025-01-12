@@ -28,7 +28,7 @@ main {
 }
 
 footer {
-    position: relative;
+    position: fixed;
     background-color: #697565;
     height: 20px;
     width: 100%;
@@ -197,6 +197,7 @@ hr {
 
 .prize-table {
     border: 1px solid rgba(255, 255, 255, 0.3);
+    border-collapse: collapse;
 
     thead {
         background-color: #3C3D37;
@@ -210,7 +211,7 @@ hr {
     }
 
     tr {
-        height: 25px;
+        max-height: 25px;
     }
 
     tbody {
@@ -225,6 +226,61 @@ hr {
     }
 }
 
+// groupstage-page
+
+.groupstage-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.group-item {
+    white-space: nowrap;
+}
+
+.group-table {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-collapse: collapse;
+
+    thead {
+        background-color: #3C3D37;
+        text-align: center;
+        font-weight: 900;
+    }
+
+    th {
+        color: white;
+        padding: 8px 24px;
+        font-size: 16px;
+        font-weight: 400;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    tr {
+        height: 10px;
+    }
+
+    tbody {
+        img {
+            margin-right: 4px;
+            scale: 1.2;
+        }
+
+        tr {
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                background-color: #013300;
+            }
+
+            &:nth-child(3),
+            &:nth-child(4) {
+                background-color: #1f2a08;
+            }
+        }
+    }
+}
 /* responsive */
 
 img {
