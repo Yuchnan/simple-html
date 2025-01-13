@@ -303,6 +303,9 @@ img {
   .aside-content {
     max-width: 100%;
   }
+  .groupstage-container {
+    grid-template-columns: 1fr;
+  }
 }
 /* small devices */
 @media screen and (max-width: 480px) {
