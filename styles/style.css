@@ -26,7 +26,7 @@ main {
 }
 
 footer {
-  position: fixed;
+  position: relative;
   background-color: #697565;
   height: 20px;
   width: 100%;
@@ -218,14 +218,15 @@ hr {
 .group-table thead {
   background-color: #3C3D37;
   text-align: center;
-  font-weight: 900;
+}
+.group-table thead th {
+  font-weight: bold;
 }
 .group-table th {
   color: white;
   padding: 8px 24px;
   font-size: 16px;
   font-weight: 400;
-  flex-wrap: nowrap;
   width: 100%;
 }
 .group-table tr {
@@ -240,6 +241,41 @@ hr {
 }
 .group-table tbody tr:nth-child(3), .group-table tbody tr:nth-child(4) {
   background-color: #1f2a08;
+}
+
+.hero-stats {
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.hero-stats thead {
+  background-color: #3C3D37;
+  text-align: center;
+  color: white;
+}
+.hero-stats thead th {
+  font-weight: bold;
+}
+.hero-stats td {
+  color: white;
+  padding: 2px 14px;
+}
+.hero-stats tr {
+  height: 10px;
+}
+.hero-stats tbody img {
+  margin-right: 4px;
+  scale: 1.2;
+}
+.hero-stats tfoot {
+  background-color: #3C3D37;
+  text-align: center;
+  color: white;
+}
+.hero-stats tfoot th:nth-child(3) {
+  background-color: #3f5610;
+}
+.hero-stats tfoot th:nth-child(4) {
+  background-color: #663200;
 }
 
 /* responsive */
