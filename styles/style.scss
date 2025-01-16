@@ -401,3 +401,11 @@ img {
         padding: 5px;
     }
 }
+.aside-table,
+.prize-table,
+.group-table,
+.hero-stats {
+    overflow-x: auto;
+    display: block;
+    width: 100%;
+}
